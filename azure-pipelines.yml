@@ -10,7 +10,7 @@ pool:
 # Build configuration  
 variables:
   buildConfiguration: 'Release'
-
+# fasdfas
 # 
 steps:
 - script: |
