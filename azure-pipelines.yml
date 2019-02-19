@@ -1,17 +1,17 @@
 # Build ASP.NET Core project using Azure Pipelines
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core?view=vsts
 
+# Build environment
 pool:
   vmImage: 'Ubuntu 16.04'
-  
+
+# asdfasdf
+
+# Build configuration  
 variables:
   buildConfiguration: 'Release'
 
-  trigger:
-    branches:
-      exclude:
-      - master
-
+# 
 steps:
 - script: |
     dotnet build --configuration $(buildConfiguration)
@@ -24,4 +24,5 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
+# Upload build output to Azure Pipelines
 - task: PublishBuildArtifacts@1
